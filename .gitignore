@@ -1,9 +1,12 @@
 # ---------- Private working documents ----------
-# IMPORTANT: these files contain employer-confidential and draft material
-# (private repo names, internal commit SHAs, internal issue numbers,
-# pre-published résumé content). Keep them OUT of the public repo.
+# IMPORTANT: these files contain employer-confidential / draft / personal
+# material (private repo names, internal commit SHAs, LinkedIn export with
+# phone & education history). Keep them OUT of the public repo.
 resume-research.md
 cv-draft.md
+LinkedinProfile.pdf
+# Local preview files (never commit)
+preview-*.html
 
 # ---------- LaTeX build artifacts ----------
 *.aux
