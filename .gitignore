@@ -7,6 +7,9 @@ cv-draft.md
 LinkedinProfile.pdf
 # Local preview files (never commit)
 preview-*.html
+# Profile README destined for a *different* repo
+# (Priyanka-Chatterjee-2000/Priyanka-Chatterjee-2000)
+profile-readme.md
 
 # ---------- LaTeX build artifacts ----------
 *.aux
