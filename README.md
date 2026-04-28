@@ -21,7 +21,7 @@ Source for **[priyanka-chatterjee-2000.github.io](https://priyanka-chatterjee-20
 The résumé is a self-contained LaTeX document. Requires a working TeX install with `pdflatex` (MacTeX, TeX Live, or MiKTeX).
 
 ```sh
-pdflatex -interaction=nonstopmode resume.tex
+pdflatex -interaction=nonstopmode ./resume.tex
 ```
 
 On macOS with MacTeX-Basic, the binary is at `/Library/TeX/texbin/pdflatex` if not on `PATH`.
