@@ -1,0 +1,59 @@
+# Priyanka Chatterjee
+
+> Backend Software Engineer with 3+ years building distributed, event-driven systems in Node.js and Go across AWS, Azure, GCP, OCI, and AliCloud. Core contributor to four open-source products (9,300+ combined GitHub stars, 120+ merged PRs across 79 repositories). Track record of cutting resource-discovery latency by 70–90%, eliminating customer-facing false positives in compliance audits, and unblocking platform-wide runtime upgrades.
+
+## Quick links
+
+- [Résumé (PDF)](/resume.pdf): Latest backend-engineer résumé
+- [Résumé source (LaTeX)](/resume.tex): Open-source LaTeX source
+- [GitHub profile](https://github.com/Priyanka-Chatterjee-2000)
+- [LinkedIn profile](https://www.linkedin.com/in/priyanka-9075/)
+- [Email](mailto:priyankachatterjee9075@gmail.com)
+- [Full Turbot OSS PR history](https://github.com/pulls?q=author%3APriyanka-Chatterjee-2000+is%3Apr+is%3Amerged+org%3Aturbot)
+
+## Background
+
+Software Engineer at **Turbot HQ, Inc.** (Aug 2022 – Present, remote). Works on Guardrails (Preventive Security Posture Management) and the four Turbot open-source products: Steampipe, Powerpipe, Flowpipe, and Tailpipe.
+
+Previously **Frontend Software Developer Intern** at Trisetra, Inc. (Feb 2022 – Jun 2022).
+
+**Education**: B.Tech in Computer Science & Engineering, University of Engineering & Management, Kolkata (Aug 2019 – May 2023, SGPA 9.45).
+
+## Stack and skills
+
+- **Languages**: JavaScript, TypeScript, Node.js, Go, Python, SQL, Bash
+- **Backend & APIs**: Express.js, REST APIs, JWT, Zod, GraphQL, WebSockets, Bun, microservices, event-driven architecture
+- **Databases & SQL**: PostgreSQL, DuckDB, SQLite, MongoDB, Firestore; jsonb / CTE / lateral joins, Foreign Data Wrappers, Parquet, prepared statements
+- **Cloud & serverless**: AWS (Lambda, RDS, S3, SecurityHub, GuardDuty, ControlTower, X-Ray, Comprehend, Pinpoint, RAM), Azure, GCP, OCI, AliCloud, Firebase
+- **Eventing & caching**: AWS SNS, AWS SQS, AWS EventBridge, Azure Event Grid, Apache Kafka, Redis (ElastiCache), IndexedDB
+- **IaC & DevOps**: Terraform, OpenTofu, HCL, Docker, GHCR, GitHub Actions, Fly.io, Vercel, Nunjucks
+- **Compliance & security**: CIS, NIST, HIPAA, PCI DSS v4, FedRAMP, SOC 2, AWS Foundational Security
+- **AI & dev tools**: Pydantic AI, Vercel AI SDK, Model Context Protocol (MCP), Claude Code, Cursor, Jest, Mocha
+
+## Featured projects
+
+- [Lila Tic-Tac-Toe](https://github.com/Priyanka-Chatterjee-2000/lila-tictactoe): Real-time multiplayer game with server-authoritative anti-cheat. Go (Nakama) game server with PostgreSQL backend on Fly.io; React 19 + TypeScript + Vite frontend on Vercel. WebSocket transport, mode-aware matchmaking via KV-storage queues, tick-based turn timer. Built end-to-end in 4 days.
+- General-Purpose AI Agent with MCP (private repo): Pydantic-AI framework with Model Context Protocol orchestration. MongoDB-backed registry, multi-model (OpenAI / Anthropic / Gemini), per-server failure isolation, Logfire observability.
+- Tasks REST API (private repo): Bun + Express 5 + TypeScript + bun:sqlite + Zod + JWT (jose). Prepared-statement CRUD, schema-validated controllers, REST status codes (201/204/400/404).
+- CIS Benchmark → Compliance Dashboard Generator (private repo): Python CLI that automates compliance-dashboard authoring from CIS benchmark XLSX workbooks. Custom HCL pretty-printer, OOP resource model, distributed as a pip-installable package.
+- [SLA Tracking Dashboard](https://github.com/pskrbasu/steampipe-tools-github-insights): 651 lines of HCL + SQL with lateral-join queries against the Steampipe GitHub plugin tables for an open-source tools team.
+- [Friend-A-Book](https://friend-a-book.web.app/): React + Firebase real-time PDF sharing PWA with chat, push notifications, and Google Maps address autocomplete.
+
+## Open source contributions
+
+Active across all four [Turbot](https://turbot.com) open-source products:
+
+- [turbot/steampipe](https://github.com/turbot/steampipe): SQL-over-cloud-APIs query engine
+- [turbot/powerpipe](https://github.com/turbot/powerpipe): Dashboards-as-code
+- [turbot/flowpipe](https://github.com/turbot/flowpipe): Cloud workflow engine
+- [turbot/tailpipe](https://github.com/turbot/tailpipe): Open-source SIEM on DuckDB + Parquet
+
+Selected merged contributions: CIS AWS Foundations v5.0.0, PCI DSS v4.0.0 via AWS Audit Manager, NIST 800-171 Rev 2, HIPAA Security Rule, CIS Azure v4.0.0, CIS GCP v4.0.0, CIS Google Workspace v1.2.0; 11 AWS log-table authoring in tailpipe-plugin-aws (CloudTrail, GuardDuty, SecurityHub, ALB/NLB/CLB/ELB access, S3 access, VPC flow, WAF, Network Firewall); DuckLake metadata backup mechanism in Tailpipe; evalCtx HCL function-call support in pipe-fittings; cross-platform smoke-test pipeline in Steampipe.
+
+## Contact
+
+- Email: priyankachatterjee9075@gmail.com
+- Phone: +91 86172 62536
+- Location: Kolkata, India
+- LinkedIn: https://www.linkedin.com/in/priyanka-9075/
+- GitHub: https://github.com/Priyanka-Chatterjee-2000

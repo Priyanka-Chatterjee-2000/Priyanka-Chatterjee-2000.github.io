@@ -1,0 +1,117 @@
+---
+layout: null
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 · Priyanka Chatterjee</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>" />
+  <style>
+    :root {
+      --primary: #1F3A68;
+      --accent:  #2563EB;
+      --header:  #1A1A1A;
+      --body:    #2E2E2E;
+      --muted:   #6B7280;
+      --bg:      #FAFAFA;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #93C5FD;
+        --accent:  #60A5FA;
+        --header:  #F9FAFB;
+        --body:    #D1D5DB;
+        --muted:   #9CA3AF;
+        --bg:      #0F172A;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "JetBrains Mono", "Fira Code", "SF Mono", Menlo, monospace;
+      background: var(--bg);
+      color: var(--body);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 540px;
+      width: 100%;
+    }
+    .prompt {
+      color: var(--muted);
+      font-size: 13.5px;
+      margin-bottom: 6px;
+    }
+    .prompt::before { content: "$ "; color: var(--accent); font-weight: 600; }
+    .err {
+      color: #DC2626;
+      font-size: 13.5px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 64px;
+      color: var(--header);
+      letter-spacing: -2px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 18px;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+    p {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--body);
+      margin-bottom: 24px;
+      font-size: 15px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover { text-decoration: underline; }
+    .links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14.5px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="prompt">cat /pages/<span id="path">requested</span></div>
+    <div class="err">cat: '<span id="path-mirror">requested</span>': No such file or directory</div>
+
+    <h1>404</h1>
+    <div class="subtitle">Page not found</div>
+    <p>This page does not exist. Maybe the URL is wrong, or this content has moved.</p>
+
+    <div class="links">
+      <a href="/">← Back home</a>
+      <a href="/resume.pdf">Download résumé</a>
+      <a href="https://github.com/Priyanka-Chatterjee-2000">GitHub</a>
+    </div>
+  </main>
+
+  <script>
+    // Replace the placeholder with the actual requested path for a small touch of realism.
+    var path = window.location.pathname.replace(/^\//, "") || "(root)";
+    document.getElementById("path").textContent = path;
+    document.getElementById("path-mirror").textContent = path;
+  </script>
+</body>
+</html>

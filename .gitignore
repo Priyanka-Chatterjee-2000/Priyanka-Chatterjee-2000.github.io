@@ -1,0 +1,32 @@
+# ---------- Private working documents ----------
+# IMPORTANT: these files contain employer-confidential and draft material
+# (private repo names, internal commit SHAs, internal issue numbers,
+# pre-published résumé content). Keep them OUT of the public repo.
+resume-research.md
+cv-draft.md
+
+# ---------- LaTeX build artifacts ----------
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.fdb_latexmk
+*.fls
+missfont.log
+
+# ---------- Jekyll ----------
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+Gemfile.lock
+vendor/
+
+# ---------- OS / editor ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~

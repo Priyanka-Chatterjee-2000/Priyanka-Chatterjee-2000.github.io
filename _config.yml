@@ -1,0 +1,36 @@
+title: Priyanka Chatterjee
+description: Backend Software Engineer · Distributed systems · Multi-cloud · Open-source contributor
+url: https://priyanka-chatterjee-2000.github.io
+author:
+  name: Priyanka Chatterjee
+  email: priyankachatterjee9075@gmail.com
+
+# GitHub-Pages-supported plugins
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
+# Pretty URLs (e.g. /resume/ instead of /resume.html)
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+# Files NEVER published to the rendered site (still visible in the public repo
+# unless also listed in .gitignore — keep both in sync for private docs)
+exclude:
+  - cv-draft.md
+  - resume-research.md
+  - CLAUDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - "*.aux"
+  - "*.log"
+  - "*.out"
+  - "*.synctex.gz"
+  - "*.toc"
+  - "*.fdb_latexmk"
+  - "*.fls"

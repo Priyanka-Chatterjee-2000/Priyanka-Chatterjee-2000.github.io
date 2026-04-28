@@ -1,0 +1,41 @@
+name: Build resume.pdf
+
+# Triggered only on resume.tex changes (or manually via workflow_dispatch).
+# This workflow uses NO user-controlled inputs from GitHub events
+# (no issue titles, PR bodies, commit messages, etc.) — so it has no
+# command-injection surface.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'resume.tex'
+      - '.github/workflows/build-resume.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX to PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+
+      - name: Commit updated PDF if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add resume.pdf
+          if git diff --cached --quiet; then
+            echo "PDF unchanged - nothing to commit."
+          else
+            git commit -m "ci: rebuild resume.pdf [skip ci]"
+            git push
+          fi

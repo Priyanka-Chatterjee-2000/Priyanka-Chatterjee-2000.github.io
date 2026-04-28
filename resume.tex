@@ -1,0 +1,170 @@
+\documentclass[10pt,letterpaper]{article}
+
+% ===== Layout =====
+\usepackage[left=0.45in,top=0.4in,right=0.45in,bottom=0.4in]{geometry}
+\usepackage{ragged2e}
+\usepackage{setspace}
+
+% ===== Colors (restrained palette) =====
+\usepackage{xcolor}
+\definecolor{primary}{HTML}{1F3A68}    % deep navy
+\definecolor{accent}{HTML}{2563EB}     % brighter blue (for accents)
+\definecolor{header}{HTML}{1A1A1A}     % near-black
+\definecolor{body}{HTML}{2E2E2E}       % softer body
+\definecolor{muted}{HTML}{6B7280}      % cool gray
+\definecolor{rulec}{HTML}{D1D5DB}      % light gray rule
+
+% ===== Sans-serif font (Latin Modern Sans) =====
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+
+% ===== Hyperlinks =====
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=primary,
+  urlcolor=primary,
+  pdftitle={Priyanka Chatterjee - Resume},
+  pdfauthor={Priyanka Chatterjee}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\color{body}
+
+% ===== Section header =====
+\newcommand{\rsection}[1]{%
+  \vspace{0.85em}%
+  {\color{primary}\fontsize{10.5pt}{12pt}\bfseries\selectfont\MakeUppercase{#1}}\\*[1pt]%
+  \textcolor{rulec}{\rule{\linewidth}{0.4pt}}\\*[3pt]%
+  \nobreak%
+}
+
+% ===== Job/role header =====
+% Args: {title} {company} {location} {date range}
+\newcommand{\role}[4]{%
+  \vspace{-4pt}%
+  \begin{tabular*}{\linewidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    {\fontsize{10pt}{11.5pt}\bfseries\color{header}\selectfont #1} & {\color{muted}\small #4} \\[1pt]
+    {\fontsize{9.5pt}{11pt}\bfseries\color{primary}\selectfont #2} & {\color{muted}\small #3} \\
+  \end{tabular*}%
+  \par\vspace{-4pt}%
+}
+
+% ===== Tighter itemize with colored bullet =====
+\renewcommand{\labelitemi}{\textcolor{accent}{\textbullet}}
+\let\olditemize\itemize
+\let\endolditemize\enditemize
+\renewenvironment{itemize}
+  {\olditemize\setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}\setlength{\topsep}{1pt}\setlength{\partopsep}{0pt}\setlength{\leftmargin}{1.2em}}
+  {\endolditemize}
+
+\begin{document}
+\fontsize{8.5pt}{10pt}\selectfont
+
+% ===== HEADER (two-column: name left, contacts right) =====
+\begin{flushleft}
+\noindent\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+\begin{tabular}[t]{@{}l@{}}
+{\fontsize{22pt}{24pt}\bfseries\color{header}\selectfont Priyanka Chatterjee}\\[2pt]
+{\fontsize{11pt}{13pt}\selectfont\color{primary} Software Engineer}\\
+\end{tabular}
+&
+\raisebox{24pt}[0pt][0pt]{\begin{tabular}[t]{@{}r@{}}
+{\small\color{muted}Kolkata, India}\\
+{\small\color{muted}\href{tel:+918617262536}{+91 86172 62536}}\\
+{\small\color{muted}\href{mailto:priyankachatterjee9075@gmail.com}{priyankachatterjee9075@gmail.com}}\\
+{\small\color{muted}\href{https://www.linkedin.com/in/priyanka-9075/}{linkedin/priyanka-9075}}\\
+{\small\color{muted}\href{https://github.com/Priyanka-Chatterjee-2000}{github/Priyanka-Chatterjee-2000}}\\
+\end{tabular}}
+\end{tabular*}\\[3pt]
+{\color{accent}\rule{\linewidth}{1.2pt}}
+\end{flushleft}
+\vspace{-8pt}
+
+% ===== SUMMARY =====
+\rsection{Summary}
+Backend Software Engineer (3+ years) building distributed, event-driven systems in \textbf{Node.js} and \textbf{Go} across \textbf{AWS}, \textbf{Azure}, \textbf{GCP}, \textbf{OCI}, and \textbf{AliCloud}; core contributor to four open-source products (\textbf{9,300+ GitHub stars}, 120+ merged PRs) with shipped impact: \textbf{70--90\%} resource-discovery latency cuts, eliminated audit false positives, and unblocked platform-wide runtime upgrades.
+
+% ===== SKILLS =====
+\rsection{Skills}
+\begin{tabular}{@{}p{0.20\linewidth}@{\hspace{1em}}p{0.78\linewidth}@{}}
+\textcolor{primary}{\bfseries Languages}              & JavaScript, TypeScript, Node.js, Go, Python, SQL, Bash \\[1pt]
+\textcolor{primary}{\bfseries Backend \& APIs}        & Express.js, REST APIs, JWT, Zod, GraphQL, WebSockets, Bun, Microservices, Event-Driven Architecture \\[1pt]
+\textcolor{primary}{\bfseries Databases \& SQL}       & PostgreSQL, DuckDB, SQLite, MongoDB, Firestore; jsonb / CTE / lateral joins, Foreign Data Wrappers, Parquet, prepared statements \\[1pt]
+\textcolor{primary}{\bfseries Cloud \& Serverless}    & AWS (Lambda, RDS, S3, SecurityHub, GuardDuty, ControlTower, X-Ray, Comprehend, Pinpoint, RAM), Azure, GCP, OCI, AliCloud, Firebase \\[1pt]
+\textcolor{primary}{\bfseries Eventing \& Caching}    & AWS SNS, AWS SQS, AWS EventBridge, Azure Event Grid, Apache Kafka, Redis (ElastiCache), IndexedDB \\[1pt]
+\textcolor{primary}{\bfseries IaC \& DevOps}          & Terraform, OpenTofu, HCL, Docker, GHCR, GitHub Actions, Fly.io, Vercel, Nunjucks \\[1pt]
+\textcolor{primary}{\bfseries Compliance \& Security} & CIS (AWS, Azure, GCP, M365, GitHub, Google Workspace), NIST, HIPAA, PCI DSS v4, FedRAMP, SOC 2, AWS Foundational Security \\[1pt]
+\textcolor{primary}{\bfseries AI \& Dev Tools}        & Pydantic AI, Vercel AI SDK, Model Context Protocol (MCP), Claude Code, Cursor, Jest, Mocha \\
+\end{tabular}
+
+% ===== EXPERIENCE =====
+\rsection{Experience}
+
+\role{Software Engineer}{\href{https://turbot.com/}{Turbot HQ, Inc.}}{Remote}{Aug 2022 -- Present}
+\begin{itemize}
+\item Built core \textbf{Tailpipe} (Turbot's open-source SIEM on \textbf{DuckDB} + \textbf{Parquet}) features in \textbf{Go} --- authored \textbf{11 AWS log tables} (CloudTrail, GuardDuty, SecurityHub, ALB/NLB/CLB/ELB access, S3 access, VPC flow, WAF, Network Firewall) and \textbf{25+ pre-built security detections}; designed standardized exit-code handling, zero-data-loss \textbf{DuckLake} metadata backups, and a cross-platform smoke-test pipeline (CentOS, Ubuntu ARM64, macOS) --- making the CLI safely usable in CI/CD pipelines.
+
+\item Led the \textbf{AWS SDK v2 $\rightarrow$ v3} migration across \textbf{11+ AWS services} in production \textbf{Node.js} Lambdas (SecurityHub, CloudWatch, ControlTower, Shield, Comprehend, Pinpoint, RAM, X-Ray, EC2, EFS), refactoring \textbf{180+ deprecated SDK call sites} across discovery, configuration sync, tagging, and resource-cleanup workflows; instrumented handlers with structured logging and \textbf{CloudWatch} metrics for SLO tracking --- kept the platform supported past AWS SDK v2's EOL and unblocked the Node.js runtime upgrade path.
+
+\item Migrated \textbf{35+ Azure} cloud-governance modules from polling to push-based eventing using \textbf{Azure Event Grid} --- cutting resource-discovery latency by \textbf{70--90\%} and eliminating recurring Azure API throttling incidents; authored a \textbf{Bash} automation framework that batched the migration end-to-end (PR creation, unit tests, deployment, Terraform-driven integration tests).
+
+\item Authored multi-cloud compliance modules in \textbf{HCL + SQL} for \textbf{CIS} (AWS v4--v6, Azure v2.1--v4.0, GCP v3--v4, Microsoft 365, Google Workspace v1.2.0, GitHub), \textbf{HIPAA}, and \textbf{PCI DSS v4} --- covering \textbf{1,000+ resource checks} across \textbf{AWS}, \textbf{Azure}, \textbf{GCP}, \textbf{OCI}, and \textbf{AliCloud}, used by enterprise customers in finance, healthcare, and government. Built an \textbf{LLM-driven orchestrator} that automates incremental benchmark implementation, cutting turnaround for new CIS releases from weeks to days.
+
+\item Optimized complex \textbf{PostgreSQL} queries powering customer compliance audits --- rewrote AWS IAM policy-evaluation queries with \texttt{jsonb\_\allowbreak array\_\allowbreak elements}, multi-stage CTEs, and condition-aware filters to correctly interpret cross-account access policies --- eliminated a class of false-positive findings that were corrupting enterprise audit reports.
+
+\item Owned release engineering for \textbf{4 open-source Go CLIs} (Steampipe, Powerpipe, Flowpipe, Tailpipe --- 9,300+ combined GitHub stars) --- unified \textbf{GitHub Actions} release/version workflows, multi-distro Linux smoke tests, automated Slack release notifications, and \textbf{GHCR} Docker image tagging. Shipped \textbf{HCL function-call support} across Steampipe and Tailpipe by extending the shared \texttt{pipe-fittings} Go library --- closed the most-requested user feature in the issue tracker. Built \textbf{GitHub-as-a-cloud} governance controls extending \textbf{Guardrails} with rule builders, a scoring engine, and prevention policies for branch protection, workflow permissions, runners, dependency restrictions, MFA, and commit-author/message rules.
+\end{itemize}
+
+\role{Frontend Software Developer Intern}{\href{https://trisetra.com/}{Trisetra, Inc.}}{Remote}{Feb 2022 -- Jun 2022}
+\begin{itemize}
+\item Authored a \textbf{3D-geometry library} with computational-geometry algorithms (footprint and inner-polygon extraction from arbitrary mesh boundaries) powering the furniture-placement feature; introduced the repo's first \textbf{Mocha} unit-test setup with real 3D-asset fixtures. Built supporting 3D scene infrastructure --- auto-crop image pipeline, \textbf{IndexedDB}-backed asset caching (fixed a recurring double-render bug), and bounding-box rotation control with surface-normal preservation across the scene graph.
+
+\item Led the user-upload workflow redesign (60+ files: \textbf{Google Maps} autocomplete, drag-and-drop upload, history dashboard, invite-code sign-up, empty/error states); drove the responsive-design overhaul of the 3D model generator and Image Canvas across mobile/desktop breakpoints; fixed AR/VR panorama rendering across viewports.
+\end{itemize}
+
+% ===== EDUCATION =====
+\rsection{Education}\penalty10000
+\role{B.Tech in Computer Science \& Engineering \textnormal{\color{muted}\small (SGPA 9.45)}}{University of Engineering \& Management}{Kolkata}{Aug 2019 -- May 2023}
+
+% ===== KEY ACHIEVEMENTS =====
+\rsection{Key Achievements}
+
+Active across all four Turbot OSS products --- \href{https://github.com/turbot/steampipe}{Steampipe}, \href{https://github.com/turbot/powerpipe}{Powerpipe}, \href{https://github.com/turbot/flowpipe}{Flowpipe}, and \href{https://github.com/turbot/tailpipe}{Tailpipe} --- with \textbf{120+ merged PRs}, \textbf{4,200+ commits} across 79 repositories, and \textbf{9,300+ combined GitHub stars}. \href{https://github.com/pulls?q=author\%3APriyanka-Chatterjee-2000+is\%3Apr+is\%3Amerged+org\%3Aturbot}{Full PR history $\rightarrow$}
+
+\begin{itemize}
+\item \textbf{Compliance benchmarks (HCL + SQL):} \href{https://github.com/turbot/steampipe-mod-aws-compliance/pull/881}{CIS AWS Foundations v5.0.0}, \href{https://github.com/turbot/steampipe-mod-aws-compliance/pull/871}{PCI DSS v4.0.0 via AWS Audit Manager}, \href{https://github.com/turbot/steampipe-mod-aws-compliance/pull/649}{NIST 800-171 Rev 2}, \href{https://github.com/turbot/steampipe-mod-aws-compliance/pull/654}{HIPAA Security Rule}, \href{https://github.com/turbot/steampipe-mod-azure-compliance/pull/300}{CIS Azure v4.0.0}, \href{https://github.com/turbot/steampipe-mod-gcp-compliance/pull/195}{CIS GCP v4.0.0}, \href{https://github.com/turbot/steampipe-mod-googleworkspace-compliance/pull/2}{CIS Google Workspace v1.2.0}.
+
+\item \textbf{Tailpipe plugin tables (Go):} \href{https://github.com/turbot/tailpipe-plugin-aws/pull/116}{AWS log-source bundle (ALB, NLB, VPC flow, WAF)}, \href{https://github.com/turbot/tailpipe-plugin-aws/pull/156}{aws\_securityhub\_finding}, \href{https://github.com/turbot/tailpipe-plugin-aws/pull/130}{aws\_guardduty\_finding}, \href{https://github.com/turbot/tailpipe-plugin-nginx/pull/23}{nginx\_access\_log} (plugin scaffolded from scratch).
+
+\item \textbf{Core engine (Go):} \href{https://github.com/turbot/tailpipe/pull/564}{DuckLake metadata backup} (Tailpipe), \href{https://github.com/turbot/pipe-fittings/pull/740}{evalCtx HCL function-call support} (pipe-fittings), \href{https://github.com/turbot/tailpipe/pull/534}{structured CLI exit codes} (Tailpipe), \href{https://github.com/turbot/steampipe/pull/4602}{cross-platform smoke-test workflow} (Steampipe).
+\end{itemize}
+
+% ===== PROJECTS =====
+\rsection{Projects}
+
+{\color{accent}\bfseries 1.}~\textbf{Lila Tic-Tac-Toe --- Real-Time Multiplayer Game} \hfill {\color{muted}\small \href{https://github.com/Priyanka-Chatterjee-2000/lila-tictactoe}{repo} \textcolor{rulec}{$\bullet$} \href{https://react-frontend-hazel-one.vercel.app}{live} \textcolor{rulec}{$\bullet$} 2026}\\
+End-to-end in 4 days. \textbf{React 19 + TypeScript + Vite} on Vercel; \textbf{Nakama} game server (\textbf{Go} core + TS runtime) on \textbf{Fly.io} with \textbf{PostgreSQL}. Server-authoritative anti-cheat with \textbf{WebSocket} transport, mode-aware matchmaking via KV-storage queues, tick-based turn timer, optimistic UI with revert-on-validation-failure, top-10 leaderboard, classic + 30s timed modes, and reconnect-into-active-match.
+
+\vspace{3pt}
+{\color{accent}\bfseries 2.}~\textbf{Tasks REST API --- Bun + Express + SQLite}\\
+Authored the task-management layer of a private learning-backend project. \textbf{Bun} + \textbf{Express 5} + \textbf{TypeScript} + \texttt{bun:sqlite} + \textbf{Zod} + \texttt{jose} (\textbf{JWT}). Designed a \texttt{Task} model with status enum, prepared-statement CRUD service with \texttt{crypto.randomUUID()} IDs, schema-validated controllers with proper REST status codes (201/204/400/404), Express router behind JWT auth, and a SQLite migration.
+
+\vspace{3pt}
+{\color{accent}\bfseries 3.}~\textbf{General-Purpose AI Agent with Model Context Protocol}\\
+Private \textbf{Python} AI-agent framework on \textbf{Pydantic-AI} with \textbf{Model Context Protocol (MCP)} server orchestration. Multi-model (\textbf{OpenAI}, \textbf{Anthropic}, \textbf{Gemini}), \textbf{MongoDB}-backed MCP-server registry, JSON config loader with strict input validation, per-server failure isolation, conversation-history persistence, sync + streaming output, and \textbf{Logfire} observability.
+
+\vspace{3pt}
+{\color{accent}\bfseries 4.}~\textbf{CIS Benchmark $\rightarrow$ Compliance Dashboard Generator}\\
+Private \textbf{Python} CLI that automates compliance-dashboard authoring for a multi-cloud governance product. Ingests CIS benchmark XLSX workbooks (AWS v3.0.0, Azure v3.0.0/v4.0.0) and emits ready-to-deploy \textbf{HCL} dashboard config plus markdown docs. OOP resource model, custom HCL pretty-printer, \texttt{openpyxl} + \texttt{pandas}, distributed as a \texttt{pip}-installable package.
+
+\vspace{3pt}
+{\color{accent}\bfseries 5.}~\textbf{SLA Tracking Dashboard for an Open-Source Tools Team}\\
+Authored 651 lines of dashboard config (\textbf{HCL + SQL}) for a public OSS repo: per-repo SLA-tracking status cards across 8 repositories (Awaiting Initial Response, Needs Triage, Awaiting Author Feedback, Stale Issues, Total Age) with threshold-coded indicators. Lateral-join SQL against the Steampipe GitHub plugin tables detects zero-org-comment issues --- replaced manual repo-by-repo triage with a single dashboard.
+
+\vspace{3pt}
+{\color{accent}\bfseries 6.}~\textbf{Friend-A-Book --- Real-Time PDF Sharing Platform} \hfill {\color{muted}\small \href{https://friend-a-book.web.app/}{live} \textcolor{rulec}{$\bullet$} 2021}\\
+\textbf{React} + \textbf{Firebase} (Firestore + Storage + Auth) PWA for real-time PDF sharing with chat, push notifications, address autocomplete (Google Maps API), and a built-in PDF viewer.
+
+\end{document}
